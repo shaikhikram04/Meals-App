@@ -14,6 +14,7 @@ class MealsScreen extends StatelessWidget {
       itemCount: meals.length,
       itemBuilder: (BuildContext context, int index) => MealItem(
         meal: meals[index],
+        showMealInfo: () {  },
       ),
     );
 

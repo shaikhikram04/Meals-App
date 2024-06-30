@@ -3,7 +3,7 @@ import 'package:meals/models/meal.dart';
 import 'package:meals/screens/meal_info.dart';
 
 class MealItem extends StatelessWidget {
-  const MealItem({super.key, required this.meal});
+  const MealItem({super.key, required this.meal, required Null Function() showMealInfo});
 
   final Meal meal;
 
