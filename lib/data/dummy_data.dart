@@ -10,7 +10,7 @@ const availableCategories = [
   ),
   Category(
     id: 'c2',
-    title: 'Quick A& Easy',
+    title: 'Quick & Easy',
     color: Colors.red,
   ),
   Category(
@@ -215,7 +215,7 @@ const dummyMeal = [
     categories: ['c2', 'c5', 'c7', 'c10'],
     title: 'Avocado Toast with Poached Egg',
     imageUrl:
-        'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2023/9/13/KC3415-franco-noriega-perfect-poached-avocado_s4x3.jpg.rend.hgtvcom.826.620.suffix/1694637196122.jpeg',
+        'https://www.flora.com/en-gb/-/media/Project/Upfield/Brands/Flora/Flora-UK-New/Assets/Recipes/Sync-Images/7e9f089f-254e-4e28-87d0-23dcb68c1fe7.jpg?rev=0c54c1bea07a4ac0aa1abc217d037404',
     ingredients: [
       '1 ripe avocado',
       '2 slices of whole grain bread',
@@ -604,3 +604,9 @@ const dummyMeal = [
     isVegetarian: false,
   ),
 ];
+
+List<Meal> getCategoryMeals(String categoryId) {
+  return dummyMeal
+      .where((meal) => meal.categories.contains(categoryId))
+      .toList();
+}
