@@ -55,7 +55,7 @@ const availableCategories = [
   ),
 ];
 
-const dummyMeal = [
+const dummyMeals = [
   Meal(
     id: 'm1',
     categories: ['c1', 'c2'],
@@ -606,7 +606,7 @@ const dummyMeal = [
 ];
 
 List<Meal> getCategoryMeals(String categoryId) {
-  return dummyMeal
+  return dummyMeals
       .where((meal) => meal.categories.contains(categoryId))
       .toList();
 }
