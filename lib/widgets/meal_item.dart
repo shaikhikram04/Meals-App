@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meals/models/meal.dart';
 import 'package:meals/screens/meal_info.dart';
+import 'package:meals/widgets/meal_item_trait.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 class MealItem extends StatelessWidget {
@@ -8,6 +9,16 @@ class MealItem extends StatelessWidget {
 
   final Meal meal;
   final void Function() showMealInfo;
+
+  String get complexityText {
+    return meal.complexity.name[0].toUpperCase() +
+        meal.complexity.name.substring(1);
+  }
+
+  String get affordabilityText {
+    return meal.affordability.name[0].toLowerCase() +
+        meal.affordability.name.substring(1);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -63,28 +74,20 @@ class MealItem extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Icon(Icons.access_time),
-                        Text(
-                          '${meal.duration} min',
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodyLarge
-                              ?.copyWith(color: Colors.white),
+                        MealItemTrait(
+                          icon: Icons.schedule,
+                          label: '${meal.duration} min',
                         ),
-                        const SizedBox(width: 10),
-                        const Icon(Icons.work),
-                        Text(meal.complexity.name,
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyLarge
-                                ?.copyWith(color: Colors.white)),
-                        const SizedBox(width: 10),
-                        const Icon(Icons.currency_rupee),
-                        Text(meal.affordability.name,
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyLarge
-                                ?.copyWith(color: Colors.white)),
+                        const SizedBox(width: 12),
+                        MealItemTrait(
+                          icon: Icons.work,
+                          label: complexityText,
+                        ),
+                        const SizedBox(width: 12),
+                        MealItemTrait(
+                          icon: Icons.currency_rupee,
+                          label: affordabilityText,
+                        ),
                       ],
                     ),
                   ],
