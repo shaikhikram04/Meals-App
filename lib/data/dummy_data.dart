@@ -61,7 +61,7 @@ const dummyMeals = [
     categories: ['c1', 'c2'],
     title: 'Spaghetti with Tomato Sauce',
     imageUrl:
-        'https://www.allrecipes.com/thmb/zHiRDzs-jfqUnHvMSy-0Lh8Q2hE=/0x512/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/254517-spaghetti-sauce-with-fresh-tomatoes-3x2-79-609ce4edcafb4191b609180163fed92b.jpg',
+        'https://cdn.pixabay.com/photo/2016/08/19/09/24/spaghetti-1604836_1280.jpg',
     ingredients: [
       '4 Tomatoes',
       '1 Tablespoon of Olive Oil',
@@ -92,7 +92,7 @@ const dummyMeals = [
     categories: ['c2'],
     title: 'Toast Hawaii',
     imageUrl:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Toast_Hawaii_RZ.jpg/1280px-Toast_Hawaii_RZ.jpg',
+        'https://cdn.pixabay.com/photo/2018/07/11/21/51/toast-3532016_960_720.jpg',
     ingredients: [
       '1 Slice White Bread',
       '1 Slice Ham',
@@ -121,7 +121,7 @@ const dummyMeals = [
     ],
     title: 'Classic Hamburger',
     imageUrl:
-        'https://www.eatingwell.com/thmb/0ufldqUg5bgMR9IVx0-Gd4c6S0k=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/3757723-7c4020ccc47240138323b9bc5b730e8d.jpg',
+        'https://cdn.pixabay.com/photo/2017/11/16/05/50/classic-burger-2953387_1280.jpg',
     ingredients: [
       '300g Cattle Hack',
       '1 Tomato',
@@ -150,7 +150,7 @@ const dummyMeals = [
     categories: ['c4'],
     title: 'Wiener Schnitzel',
     imageUrl:
-        'https://www.allrecipes.com/thmb/WMjA6SMY6rimw1mZh2qEk6sxkuQ=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/78117-wienerschnitzel-ddmfs-3X4-0200-ec06b882b575486ab7398957709413d2.jpg',
+        'https://cdn.pixabay.com/photo/2020/07/01/13/28/wiener-schnitzel-5359641_960_720.jpg',
     ingredients: [
       '8 Veal Cutlets',
       '4 Eggs',
@@ -186,7 +186,7 @@ const dummyMeals = [
     ],
     title: 'Margherita Pizza',
     imageUrl:
-        'https://cdn.loveandlemons.com/wp-content/uploads/2023/07/margherita-pizza-recipe-719x1024.jpg',
+        'https://cdn.pixabay.com/photo/2023/05/28/14/13/ai-generated-8023787_1280.jpg',
     ingredients: [
       '1 pizza dough',
       '1 cup tomato sauce',
@@ -215,7 +215,7 @@ const dummyMeals = [
     categories: ['c2', 'c5', 'c7', 'c10'],
     title: 'Avocado Toast with Poached Egg',
     imageUrl:
-        'https://www.flora.com/en-gb/-/media/Project/Upfield/Brands/Flora/Flora-UK-New/Assets/Recipes/Sync-Images/7e9f089f-254e-4e28-87d0-23dcb68c1fe7.jpg?rev=0c54c1bea07a4ac0aa1abc217d037404',
+        'https://cdn.pixabay.com/photo/2023/10/02/08/38/avocado-8288750_1280.jpg',
     ingredients: [
       '1 ripe avocado',
       '2 slices of whole grain bread',
@@ -244,7 +244,7 @@ const dummyMeals = [
     categories: ['c2', 'c5', 'c10'],
     title: 'Chicken Caesar Salad',
     imageUrl:
-        'https://s23209.pcdn.co/wp-content/uploads/2023/01/220905_DD_Chx-Caesar-Salad_051-1024x1536.jpg',
+        'https://cdn.pixabay.com/photo/2014/01/17/08/56/caesar-246818_1280.jpg',
     ingredients: [
       '2 chicken breasts',
       '1 romaine lettuce',
@@ -274,7 +274,7 @@ const dummyMeals = [
     categories: ['c2', 'c6', 'c8'],
     title: 'Thai Green Curry',
     imageUrl:
-        'https://hot-thai-kitchen.com/wp-content/uploads/2022/05/green-curry-new-sq-2.jpg',
+        'https://cdn.pixabay.com/photo/2021/07/04/13/23/green-curry-6386360_1280.jpg',
     ingredients: [
       '2 tbsp green curry paste',
       '1 can coconut milk',
@@ -305,7 +305,7 @@ const dummyMeals = [
     categories: ['c5', 'c7', 'c9', 'c10'],
     title: 'Crepes with Berries',
     imageUrl:
-        'https://catzinthekitchen.com/wp-content/uploads/2013/08/Berry-Crepes-5.jpg.webp',
+        'https://cdn.pixabay.com/photo/2023/06/25/20/05/ai-generated-8088147_1280.jpg',
     ingredients: [
       '1 cup flour',
       '2 eggs',
@@ -336,7 +336,7 @@ const dummyMeals = [
     categories: ['c2', 'c5', 'c6', 'c8', 'c10'],
     title: 'Vietnamese Spring Rolls',
     imageUrl:
-        'https://themom100.com/wp-content/uploads/2024/01/vietnamese-spring-rolls-5580.jpg',
+        'https://cdn.pixabay.com/photo/2023/07/18/19/19/ai-generated-8135467_1280.jpg',
     ingredients: [
       'Rice paper wrappers',
       'Shrimp or tofu',
@@ -366,7 +366,7 @@ const dummyMeals = [
     categories: ['c5', 'c9', 'c10'],
     title: 'Ratatouille',
     imageUrl:
-        'https://www.allrecipes.com/thmb/xxEoPADWyOC5qyQHRMy-4HA5tDE=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/222006-disneys-ratatouille-DDMFS-4x3-36eb15843ab548a79e7aab761dac92e1.jpg',
+        'https://cdn.pixabay.com/photo/2020/06/19/08/25/ratatouille-5316194_1280.jpg',
     ingredients: [
       '1 eggplant',
       '1 zucchini',
@@ -400,7 +400,7 @@ const dummyMeals = [
     categories: ['c2', 'c5', 'c6', 'c8', 'c10'],
     title: 'Mango Sticky Rice',
     imageUrl:
-        'https://www.allrecipes.com/thmb/vkOJBiZXz7nfXqok3-5B4peU0S0=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/AR-150313-thai-sweet-sticky-rice-with-mango-khao-neeo-mamuang-ddmfs-4x3-hero-0da7a9b26cce4d07aea44f2f2b6abd95.jpg',
+        'https://cdn.pixabay.com/photo/2018/08/14/07/12/mango-sticky-rice-3604851_1280.jpg',
     ingredients: [
       '1 cup glutinous rice',
       '1 1/2 cups coconut milk',
@@ -429,7 +429,7 @@ const dummyMeals = [
     categories: ['c1', 'c7'],
     title: 'Frittata',
     imageUrl:
-        'https://www.spendwithpennies.com/wp-content/uploads/2023/02/How-to-Make-a-Frittata-SpendWithPennies-9-1024x1536.jpg',
+        'https://cdn.pixabay.com/photo/2017/10/01/19/35/frittata-2806742_1280.jpg',
     ingredients: [
       '6 large eggs',
       '1/4 cup milk',
@@ -462,7 +462,7 @@ const dummyMeals = [
     categories: ['c3', 'c7'],
     title: 'Breakfast Burger',
     imageUrl:
-        'https://stephenlarosa.co/wp-content/uploads/2021/07/Breakfast-Burger.blog-1-1200x900.jpg',
+        'https://cdn.pixabay.com/photo/2023/03/05/11/13/food-7831144_1280.jpg',
     ingredients: [
       '1 beef patty',
       '1 hamburger bun',
@@ -494,7 +494,7 @@ const dummyMeals = [
     categories: ['c4'],
     title: 'Sauerbraten',
     imageUrl:
-        'https://www.saveur.com/uploads/2012/10/10-230829-SAVEUR-MHALL-SAUERBRATEN-050-scaled.jpg?auto=webp&auto=webp&optimize=high&quality=70&width=1440',
+        'https://cdn.pixabay.com/photo/2017/07/17/13/50/sauerbraten-2512443_960_720.jpg',
     ingredients: [
       '1 beef roast (about 3-4 pounds)',
       '2 cups red wine vinegar',
@@ -572,7 +572,7 @@ const dummyMeals = [
     categories: ['c1'],
     title: 'Lasagna',
     imageUrl:
-        'https://thecozycook.com/wp-content/uploads/2022/04/Lasagna-Recipe.jpg',
+        'https://cdn.pixabay.com/photo/2022/11/08/05/34/lasagna-7577748_1280.jpg',
     ingredients: [
       '500g ground beef',
       '9 lasagna noodles',
@@ -604,9 +604,3 @@ const dummyMeals = [
     isVegetarian: false,
   ),
 ];
-
-List<Meal> getCategoryMeals(String categoryId) {
-  return dummyMeals
-      .where((meal) => meal.categories.contains(categoryId))
-      .toList();
-}
