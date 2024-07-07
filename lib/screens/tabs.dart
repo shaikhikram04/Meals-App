@@ -10,13 +10,6 @@ import 'package:meals/providers/meals_provider.dart';
 import 'package:meals/providers/favorite_provider.dart';
 import 'package:meals/providers/filters_provider.dart';
 
-const kInitialFilter = {
-  Filter.glutenFree: false,
-  Filter.lactoseFree: false,
-  Filter.vegan: false,
-  Filter.vegetarian: false,
-};
-
 class TabsScreen extends ConsumerStatefulWidget {
   const TabsScreen({super.key});
 
@@ -26,13 +19,6 @@ class TabsScreen extends ConsumerStatefulWidget {
 
 class _TabsScreenState extends ConsumerState<TabsScreen> {
   int _selectedPageIndex = 0;
-  Map<Filter, bool> _selectedFilter = {
-    Filter.glutenFree: false,
-    Filter.lactoseFree: false,
-    Filter.vegan: false,
-    Filter.vegetarian: false,
-  };
-
 
   void _selectPage(int index) {
     setState(() {
@@ -43,43 +29,32 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
   void _setScreen(String identifier) async {
     Navigator.of(context).pop();
     if (identifier == 'filters') {
-      final result =
-          await Navigator.of(context).push<Map<Filter, bool>>(MaterialPageRoute(
-        builder: (ctx) => FiltersScreen(
-          currentFilters: _selectedFilter,
-        ),
+      await Navigator.of(context).push<Map<Filter, bool>>(MaterialPageRoute(
+        builder: (ctx) => const FiltersScreen(),
       ));
-
-      setState(() {
-        _selectedFilter = result ?? kInitialFilter;
-      });
     }
-  }
-
-  List<Meal> getFilteredMeals(List<Meal> availableMeal) {
-    return availableMeal.where(
-      (meal) {
-        if (_selectedFilter[Filter.glutenFree]! && !meal.isGlutenFree) {
-          return false;
-        }
-        if (_selectedFilter[Filter.lactoseFree]! && !meal.isLactoseFree) {
-          return false;
-        }
-        if (_selectedFilter[Filter.vegan]! && !meal.isVegan) {
-          return false;
-        }
-        if (_selectedFilter[Filter.vegetarian]! && !meal.isVegetarian) {
-          return false;
-        }
-
-        return true;
-      },
-    ).toList();
   }
 
   @override
   Widget build(BuildContext context) {
-    final availableMeal = getFilteredMeals(ref.watch(mealsProvider));
+    final meal = ref.watch(mealsProvider);
+    final activeFilter = ref.watch(filtersProvider);
+    final availableMeal = meal.where((meal) {
+      if (activeFilter[Filter.glutenFree]! && !meal.isGlutenFree) {
+        return false;
+      }
+      if (activeFilter[Filter.lactoseFree]! && !meal.isLactoseFree) {
+        return false;
+      }
+      if (activeFilter[Filter.vegan]! && !meal.isVegan) {
+        return false;
+      }
+      if (activeFilter[Filter.vegetarian]! && !meal.isVegetarian) {
+        return false;
+      }
+
+      return true;
+    }).toList();
 
     Widget activePage = CategoriesScreen(
       availableMeals: availableMeal,
