@@ -36,9 +36,19 @@ class MealDetailsScreen extends ConsumerWidget {
                 ),
               );
             },
-            icon: Icon(
-              isFavoriteMeal ? Icons.star : Icons.star_border,
-              size: 27,
+            icon: AnimatedSwitcher(
+              duration: const Duration(milliseconds: 300),
+              transitionBuilder: (child, animation) {
+                return RotationTransition(
+                  turns: Tween<double>(begin: 0.8, end: 1).animate(animation),
+                  child: child,
+                );
+              },
+              child: Icon(
+                isFavoriteMeal ? Icons.star : Icons.star_border,
+                size: 27,
+                key: ValueKey(isFavoriteMeal),
+              ),
             ),
           )
         ],
