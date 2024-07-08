@@ -36,22 +36,19 @@ class MealDetailsScreen extends ConsumerWidget {
                 ),
               );
             },
-            icon: AnimatedSwitcher(
+            icon: AnimatedCrossFade(
               duration: const Duration(milliseconds: 300),
-              transitionBuilder: (child, animation) {
-                return RotationTransition(
-                  turns: Tween(
-                    begin: 0.8,
-                    end: 1.0,
-                  ).animate(animation),
-                  child: child,
-                );
-              },
-              child: Icon(
-                isFavoriteMeal ? Icons.star : Icons.star_border,
+              firstChild: const Icon(
+                Icons.star,
                 size: 27,
-                key: ValueKey(isFavoriteMeal),
               ),
+              secondChild: const Icon(
+                Icons.star_border,
+                size: 27,
+              ),
+              crossFadeState: isFavoriteMeal
+                  ? CrossFadeState.showFirst
+                  : CrossFadeState.showSecond,
             ),
           )
         ],
