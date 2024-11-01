@@ -1,4 +1,5 @@
 import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -21,7 +22,7 @@ void main() {
       backgroundColor: Colors.white,
 
       // Enable preview by default for web demo
-      enabled: true,
+      enabled: !kReleaseMode,
 
       // Start with Galaxy A50 as it's a common Android device
       defaultDevice: Devices.ios.iPhone13ProMax,
@@ -30,7 +31,7 @@ void main() {
       isToolbarVisible: true,
 
       // Keep English only to avoid confusion in demos
-      availableLocales: [Locale('en', 'US')],
+      availableLocales: const [Locale('en', 'US')],
 
       // Customize preview controls
       tools: const [
