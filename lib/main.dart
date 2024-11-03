@@ -22,7 +22,7 @@ void main() {
       backgroundColor: Colors.white,
 
       // Enable preview by default for web demo
-      enabled: !kReleaseMode,
+      enabled: true,
 
       // Start with Galaxy A50 as it's a common Android device
       defaultDevice: Devices.ios.iPhone13ProMax,
